@@ -10,12 +10,12 @@ go-ethereum as ethereum client.
 5. Verify solc --version, verify geth version
 
 # Create contract
-Create a folder named contracts
-Create a file names rating.sol and define the contract format
-Generate go code for this using
-  abigen -sol rating.sol -pkg contracts -out rating.go
-This will generate go code for our contract that we will use to interact with network
-Before moving further, we should verify that contract working properly. Let's define a rating_test.go and write a unit test.
+Create a folder named contracts <p>
+Create a file names rating.sol and define the contract format <p>
+Generate go code for this using <p>
+  abigen -sol rating.sol -pkg contracts -out rating.go <p>
+This will generate go code for our contract that we will use to interact with network <p>
+Before moving further, we should verify that contract working properly. Let's define a rating_test.go and write a unit test. <p>
   
 # Deploy contract
   

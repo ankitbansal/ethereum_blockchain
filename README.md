@@ -17,7 +17,17 @@ go-ethereum as ethereum client.
 * Before moving further, we should verify that contract working properly. Let's define a rating_test.go and write a unit test. 
   
 # Deploy contract
-go get gopkg.in/yaml.v2
+* To deploy contract on Rinkeby network, we use metamask chrome extension. Create an account and point it to Rinkeby TestNet
+* To get fund, Rinkeby requires you to post your account address via any social site. I tweeted my account address.
+* Once done, you need to provide that post link to Rinkeby Authentication Faucet. Once done, you should see ethers in your account. You can delete tweet afterwards.
+* Next thing is to have a node to deploy on ethereum. I used Infura that provide you nodes you can use rather than creating one. You need to create a free account on Infura to use it.
+* This provide node address url which we will use to connect.  We also need private key and paraphrase for Metamask in order to connect.
+* Once you have these, put all of these in a file and name it conf.yaml (refer conf.yaml.template for file format)
+* Next we use yaml library to parse file: go get gopkg.in/yaml.v2
+* That's pretty much deployment configuration we need. We can go ahead and deploy it now.
+
+# Mine Contract
+
 
   
   

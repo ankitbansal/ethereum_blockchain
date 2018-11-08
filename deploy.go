@@ -30,7 +30,7 @@ func main(){
 	if err != nil {
 		fmt.Println("error:", err)
 	}
-	
+
 	blockchain, err := ethclient.Dial(config.NodeAddress)
 
 	if err != nil {

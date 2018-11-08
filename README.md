@@ -17,6 +17,8 @@ go-ethereum as ethereum client.
 * Before moving further, we should verify that contract working properly. Let's define a rating_test.go and write a unit test. 
   
 # Deploy contract
+go get gopkg.in/yaml.v2
+
   
   
   

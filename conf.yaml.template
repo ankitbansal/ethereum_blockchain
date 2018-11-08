@@ -1,5 +1,3 @@
-{
-    "nodeAddress": "",
-    "key": "",
-    "paraphrase": ""
-}
+nodeAddress: $NODE_ADDRESS
+key: $KEY
+paraphrase: $PASSPHRASE

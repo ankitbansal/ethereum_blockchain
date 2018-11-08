@@ -8,27 +8,29 @@ import (
 	"strings"
 	"fmt"
 	"math/big"
-	"os"
+	"io/ioutil"
 	"gopkg.in/yaml.v2"
 )
 
 
 type Configuration struct {
-	NodeAddress 	string
-	Key		string
-	Paraphrase	string
+	NodeAddress 	string	`yaml:"nodeAddress"`
+	Key		string	`yaml:"key"`
+	Paraphrase	string  `yaml:"paraphrase"`
 }
 
 func main(){
 	// connect to an ethereum node  hosted by infura
-	file, _ := os.Open("conf.yaml")
-	defer file.Close()
-	config := Configuration{}
-	err :=  yaml.Unmarshal([]byte(file), &Configuration{})
+	file, err := ioutil.ReadFile("conf.yaml")
 	if err != nil {
 		fmt.Println("error:", err)
 	}
-
+	config := Configuration{}
+	err =  yaml.Unmarshal(file, &config)
+	if err != nil {
+		fmt.Println("error:", err)
+	}
+	
 	blockchain, err := ethclient.Dial(config.NodeAddress)
 
 	if err != nil {

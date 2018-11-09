@@ -26,9 +26,9 @@ go-ethereum as ethereum client.
 * Next we use yaml library to parse file: go get gopkg.in/yaml.v2
 * That's pretty much deployment configuration we need. We can go ahead and deploy it now.
 
-# Mine Contract
-
-
+# Retrieve Message
+* Once the deploy is successful, an address will be provided. You can check on the rinkeby url that contract has been mined. This usually takes couple of mins
+* Now we can go ahead and retrieve the message
   
   
   
